@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.container-slides {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  border-radius: 10px;
+}
+
+.slides {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 30vw;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+.slide {
+  position: absolute;
+  list-style-type: none;
+  width: 50%;
+  height: 100%;
+  font-size: 30px;
+  opacity: 0;
+  z-index: -1;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+.slide:nth-of-type(1) {
+  background-image: url(assets/img/1.jpg);
+}
+
+.slide:nth-of-type(2) {
+  background-image: url(assets/img/2.jpg);
+}
+
+.slide:nth-of-type(3) {
+  background-image: url(assets/img/3.jpg);
+}
+
+.slide:nth-of-type(4) {
+  background-image: url(assets/img/4.jpg);
+}
+
+.slide:nth-of-type(5) {
+  background-image: url(assets/img/5.jpg);
+}
+
+.active {
+  z-index: 1;
+  opacity: 1;
+  transition: ease 1s;
+}
+
+.controlls {
+  margin-bottom: 20px;
+}
+.indicator,
+.btn {
+  width: 100px;
+  padding: 10px;
+  background-color: rgb(79, 165, 83);
+  text-align: center;
+  color: rgb(255, 255, 255);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.indicators-container {
+  display: flex;
+  width: 30%;
+  height: 40px;
+  gap: 10px;
+}
+
+.indicator {
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.indicator:nth-of-type(1) {
+  background-image: url(assets/img/1.jpg);
+}
+
+.indicator:nth-of-type(2) {
+  background-image: url(assets/img/2.jpg);
+}
+
+.indicator:nth-of-type(3) {
+  background-image: url(assets/img/3.jpg);
+}
+
+.indicator:nth-of-type(4) {
+  background-image: url(assets/img/4.jpg);
+}
+
+.indicator:nth-of-type(5) {
+  background-image: url(assets/img/5.jpg);
+}
+
+.indicator.active {
+  background-color: rgb(79, 165, 83);
+  background-image: none;
+}
+
+.btn:hover,
+.indicator:hover {
+  background: rgb(46, 214, 54);
+  transition: ease 0.3s;
+}
+
+@media (max-width: 1500px) {
+  .container {
+    width: 800px;
+  }
+
+  .slides {
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    width: 80px;
+  }
+}
