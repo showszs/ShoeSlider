@@ -70,7 +70,9 @@
   transition: ease 1s;
 }
 
-.controlls {
+.controls {
+  display: flex;
+  gap: 10px;
   margin-bottom: 20px;
 }
 .indicator,
